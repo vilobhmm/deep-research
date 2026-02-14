@@ -1,0 +1,100 @@
+system:
+  name: "Avengers AI Operating System"
+  version: "1.0.0"
+  timezone: "UTC"
+
+agents:
+  iron_man:
+    role: "Chief of Staff & Orchestrator"
+    model: "claude-sonnet-4-5-20250929"
+    temperature: 0.7
+
+  captain_america:
+    role: "Research & Intelligence"
+    model: "claude-sonnet-4-5-20250929"
+    temperature: 0.3
+    research_sources:
+      - "https://news.ycombinator.com/"
+      - "https://github.com/trending"
+      - "https://ai.google/research/"
+      - "https://arxiv.org/list/cs.AI/recent"
+      - "https://openai.com/research"
+      - "https://www.anthropic.com/research"
+    schedule:
+      - "06:00"  # Morning sweep
+      - "12:00"  # Midday sweep
+      - "18:00"  # Evening sweep
+
+  hulk:
+    role: "Prototype Architect"
+    model: "claude-sonnet-4-5-20250929"
+    temperature: 0.5
+    github_repo: "https://github.com/vilobhmm"
+    prototype_types:
+      - "RAG systems"
+      - "Fine-tuning demos"
+      - "Agent loops"
+      - "Evaluation harnesses"
+      - "Tool use examples"
+      - "Prompt engineering demos"
+    requirements:
+      - "Must run without errors"
+      - "Minimal but complete"
+      - "Interactive/playable"
+      - "Clear documentation"
+      - "README with instructions"
+
+  thor:
+    role: "X/Twitter Operator"
+    model: "claude-sonnet-4-5-20250929"
+    temperature: 0.8
+    tone: "sharp, authoritative, fast-moving"
+    output_types:
+      - "single tweets"
+      - "threads"
+      - "quote tweets"
+      - "reactions"
+    max_tweets_per_day: 10
+
+  black_widow:
+    role: "LinkedIn Authority Architect"
+    model: "claude-sonnet-4-5-20250929"
+    temperature: 0.6
+    tone: "composed, high-signal, strategic"
+    output_types:
+      - "thought leadership"
+      - "deep analysis"
+      - "career insights"
+      - "strategic commentary"
+    max_posts_per_week: 5
+
+  hawkeye:
+    role: "Newsletter & Intelligence Distillation"
+    model: "claude-sonnet-4-5-20250929"
+    temperature: 0.5
+    schedule: "weekly"
+    newsletter_sections:
+      - "Week's Top AI Developments"
+      - "Research Highlights"
+      - "Prototype Showcase"
+      - "Signal vs Noise"
+      - "What to Watch"
+
+scheduling:
+  daily_run_time: "04:00"  # 4 AM daily run
+  captain_america_sweeps: 3  # Times per day
+  thor_frequency: "hourly"  # Check for new tweets to write
+  black_widow_frequency: "daily"
+  hawkeye_frequency: "weekly"
+  hulk_frequency: "daily"  # One prototype per day
+
+output:
+  intelligence_dir: "intelligence"
+  content_dir: "content"
+  prototypes_dir: "prototypes"
+  logs_dir: "logs"
+
+github:
+  auto_commit: true
+  auto_push: true
+  commit_message_prefix: "[Avengers AI]"
