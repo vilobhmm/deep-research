@@ -1,4 +1,4 @@
-# 🛡⚡ Avengers AI Operating System
+# 🛡⚡ Avengers AI Operating Multi Agent System
 
 **A multi-agent AI system that works 24/7 to keep you ahead in AI.**
 
